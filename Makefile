@@ -1,10 +1,10 @@
 CC = gcc
 
-mat_mul: mat_mul.c
-	gcc mat_mul.c -o mat_mul -lm
+largest_number: largest_number.c
+	gcc largest_number.c -o largest_number -lm
 
 clean:
-	rm mat_mul
+	rm largest_number
 
-test: mat_mul
+test: largest_number
 	bash test.sh

@@ -3,12 +3,10 @@ echo
 
 echo "*****"
 echo
-echo "Matrix mutliplication..."
-output_mat_mul=$(./mat_mul <test/input_mat_mul)
-echo $output_mat_mul
-expected_output_mat_mul="
-   7   10 
-  15   22"
+echo "Find the largest number..."
+output_largest_num=$(./largest_num <test/input_largest_number)
+echo $output_largest_num
+expected_output_largest_num="24.20"
 
 if [ $? -eq 0 ] ; then
   echo "Pass: Program exited zero"
@@ -17,10 +15,10 @@ else
   exit 1
 fi
 
-if [[ $output_mat_mul == *$expected_output_mat_mul* ]] ; then
+if [[ $output_largest_num == *$expected_output_largest_num* ]] ; then
   echo "Pass: Output is correct"
 else
-  echo "Expected '$expected_output_mat_mul' but got: $output_mat_mul"
+  echo "Expected '$expected_output_largest_num' but got: $output_largest_num"
   exit 1
 fi
 
